@@ -61,7 +61,7 @@ public class GoogleAuthTest {
     // Change this to the saved secret from the running the above test.
     @SuppressWarnings("SpellCheckingInspection")
     private static final String SECRET_KEY = "KR52HV2U5Z4DWGLJ";
-    private static final int VALIDATION_CODE = 598775;
+    private static final int VALIDATION_CODE = 131357;
 
     @BeforeClass
     public static void setupMockCredentialRepository() {
@@ -112,7 +112,7 @@ public class GoogleAuthTest {
         final String secret = key.getKey();
         final List<Integer> scratchCodes = key.getScratchCodes();
 
-        String otpAuthURL = GoogleAuthenticatorQRGenerator.getOtpAuthURL("Test Org.", "test@prova.org", key);
+        String otpAuthURL = GoogleAuthenticatorQRGenerator.getOtpAuthURL("HotelKey llc.", "qr@hotelkeyapp.com", key);
 
         System.out.println("Please register (otpauth uri): " + otpAuthURL);
         System.out.println("Base64-encoded secret key is " + secret);
@@ -135,7 +135,7 @@ public class GoogleAuthTest {
         final String secret = key.getKey();
         final List<Integer> scratchCodes = key.getScratchCodes();
 
-        String otpAuthURL = GoogleAuthenticatorQRGenerator.getOtpAuthURL("Test Org.", "test@prova.org", key);
+        String otpAuthURL = GoogleAuthenticatorQRGenerator.getOtpAuthURL("HotelKey llc.", "qr@hotelkeyapp.com", key);
 
         System.out.println("Please register (otpauth uri): " + otpAuthURL);
         System.out.println("Secret key is " + secret);
